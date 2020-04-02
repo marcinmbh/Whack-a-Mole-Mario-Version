@@ -13,7 +13,7 @@
     <section class="board">
         <div class="marioname">Mario</div>
         <div class="result">
-            <div class="coin"><img class="coin" src="images/coinss.png" /></div><span class="score"></span>
+            <div class="coin"><img class="coin" src="images/coinss.png" /></div><span class="score">0</span>
         </div>
         <div class="whackamario"><img class="whackamario" src="images/WHATAMARIO.png" /></div>
 
@@ -21,10 +21,8 @@
             <p class="time">Time<span id="seconds"> 30</span></p>
         </div>
     </section>
-
-
     <section class="buttons">
-        <button onClick="startGame()" class="button">Start</button>
+        <button class="startButton button">Start</button>
         <button id="engineBtn" class="button">Rules</button>
     </section>
 
@@ -35,7 +33,7 @@
             </div>
             <div class="btns">
                 <button class="btn buttonStart ">Play Again</button>
-                <button class=" btn buttonExit ">Exit Game</button>
+                <button onclick="self.close()" class=" btn buttonExit ">Exit Game</button>
             </div>
         </div>
 
