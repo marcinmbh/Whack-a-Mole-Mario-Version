@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wack a Mario</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <section class="board">
+        <div class="marioname">Mario</div>
+        <div class="result">
+            <div class="coin"><img class="coin" src="images/coinss.png" /></div><span class="score"></span>
+        </div>
+        <div class="whackamario"><img class="whackamario" src="images/WHATAMARIO.png" /></div>
+
+        <div class="timebox">
+            <p class="time">Time<span id="seconds"> 30</span></p>
+        </div>
+    </section>
+
+
+    <section class="buttons">
+        <button onClick="startGame()" class="button">Start</button>
+        <button id="engineBtn" class="button">Rules</button>
+    </section>
+
+    <section id='gameend'>
+        <div class="gameover">
+            <div class="titleover">
+                <p>GAME OVER</p>
+            </div>
+            <div class="btns">
+                <button class="btn buttonStart ">Play Again</button>
+                <button class=" btn buttonExit ">Exit Game</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id='rule' class='engine'>
+        <div class='wholemap'>
+            <span class="exitbtn">&times;</span>
+
+            <div class="items">
+                <img class="smallImg" src="images/goomba.png">
+                <p style='color:#33cc33'>&nbsp;GOOMBA</strong>: <strong>+100</strong>$</p>
+            </div>
+            <div class="items">
+                <img class="smallImg" src="images/littlegombas.png" />
+                <p style='color:#33cc33'><strong>&nbsp;LIL GOOMBAS</strong>: <strong>+200</strong>$</p>
+            </div>
+            <div class="items">
+                <img class="smallImg" src="images/koopatroopa.png">
+                <p style='color:#33cc33'><strong>&nbsp;KOOPA TROOPA</strong>: <strong>+150</strong>$ &nbsp DOUBLE
+                    CLICK-></p>
+                <img class="smallImg" src="images/shell.png">
+
+                <p style='color:#33cc33'><strong>&nbsp;</strong><strong>+300</strong>$ </p>
+
+            </div>
+
+            <div class="items">
+                <img class="smallImg" src="images/spiny.png" />
+                <p style='color:#ff0000'><strong>&nbsp;SPINY</strong>: <strong>-200</strong>$</p>
+            </div>
+
+            <div class="items">
+                <img class="smallImg" src="images/piranhaplant.png">
+                <p style='color:#ff0000'><strong>&nbsp;PIRANHA PLANT</strong>: <strong>GAME OVER</strong></p>
+            </div>
+            <div class="items">
+                <img class="smallImg" src="images/goldenmushroom.png">
+                <p style='color:#ffD700'><strong>&nbsp;GOLDEN MUSHROOM</strong>: <strong>DOUBLE $</strong></p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div id="game">
+        <div class="hole hole1">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole2">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole3">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole4">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole5">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole6">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole7">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole8">
+            <div class="mole"></div>
+        </div>
+    </div>
+
+    <audio id="Mario" src="sounds/SuperMario.mp3"></audio>
+    <audio id="coinsound" src="sounds/coinsound.mp3"></audio>
+    <audio id="coinsound1" src="sounds/coinsound1.mp3"></audio>
+    <audio id="goldenmushroom" src="sounds/mushroom.mp3"></audio>
+    <audio id="stomp" src="sounds/stomp.mp3"></audio>
+    <audio id="powerdown" src="sounds/powerdown.mp3"></audio>
+    <audio id="gameover" src="sounds/gameover.mp3"></audio>
+    <audio id="mariohit" src="sounds/mariohit.mp3"></audio>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
