@@ -29,16 +29,18 @@
     <section id='gameend'>
         <div class="gameover">
             <div class="titleover">
-                <p>GAME OVER</p>
+                <p class="title">GAME OVER</p>
+            </div>
+            <div class="totalwin">
+                <p class="scoreAct"> </p>
             </div>
             <div class="btns">
-                <button class="btn buttonStart ">Play Again</button>
-                <button onclick="self.close()" class=" btn buttonExit ">Exit Game</button>
+                <button onClick="window.location.reload()" class="btn buttonStart ">Play Again</button>
+
             </div>
         </div>
 
     </section>
-
     <section id='rule' class='engine'>
         <div class='wholemap'>
             <span class="exitbtn">&times;</span>
@@ -118,9 +120,10 @@
     <audio id="goldenmushroom" src="sounds/mushroom.mp3"></audio>
     <audio id="stomp" src="sounds/stomp.mp3"></audio>
     <audio id="powerdown" src="sounds/powerdown.mp3"></audio>
-    <audio id="gameover" src="sounds/gameover.mp3"></audio>
+    <audio id="gameoverSound" src="sounds/gameover.mp3"></audio>
     <audio id="mariohit" src="sounds/mariohit.mp3"></audio>
-
+    <audio id="stagecomplete" src="sounds/stagecomplete.mp3"></audio>
+    <audio id="hurryup" src="sounds/hurryup.mp3"></audio>
 
     <script type="text/javascript" src="script.js"></script>
 </body>
