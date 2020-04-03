@@ -1,0 +1,355 @@
+html {
+    box-sizing: border-box;
+    text-transform: uppercase;
+
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 10px;
+    background: url(images/marioback.jpg)center no-repeat;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+
+.board {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100px;
+    margin: 5px 0;
+    align-items: center;
+
+}
+
+.marioname {
+    font-size: 30px;
+    flex: 1 1 300px;
+    margin: 20px 20px;
+
+}
+
+.result {
+    display: flex;
+    flex: 1 1 330px;
+    background-repeat: no-repeat;
+    transition: transform 0.5s;
+
+}
+
+.coin {
+    height: 70px;
+    width: 80px;
+    transition: transform 0.5s;
+
+}
+
+.score {
+    font-size: 30px;
+    line-height: 80px;
+    margin-left: 20px;
+}
+
+.whackamario {
+    width: 100%;
+    background-repeat: no-repeat;
+    flex: 2 1 660px;
+    margin: 0 auto;
+    height: 60px;
+
+
+}
+
+.timebox {
+    font-size: 30px;
+    flex: 660px;
+    text-align: center;
+}
+
+
+.coin.animated {
+    animation: spin 0.3s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 0 100px;
+    background: #92CD41;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    color: white;
+    box-shadow: inset -4px -4px 0px 0px #4AA52E;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background: #76c442;
+    box-shadow: inset -6px -6px 0px 0px #4AA52E;
+}
+
+.button:active {
+    box-shadow: inset 4px 4px 0px 0px #4AA52E;
+}
+
+.button:before,
+.button:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.button:before {
+    top: -6px;
+    left: 0;
+    border-top: 6px white solid;
+    border-bottom: 6px white solid;
+}
+
+.button:after {
+    left: -6px;
+    top: 0;
+    border-left: 6px white solid;
+    border-right: 6px white solid;
+
+}
+
+
+
+#game {
+    width: 800px;
+    height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hole {
+    flex: 1 0 23%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after {
+    display: block;
+    background: url(images/hole.png) center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 290px;
+    position: absolute;
+    z-index: 2;
+    bottom: -45px;
+}
+
+.mole {
+    background: url(/images/goomba.png) bottom center no-repeat;
+    background-size: 40%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 50%;
+    transition: all 0.1s;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+#gameend {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    font-size: 100px;
+
+
+}
+
+.gameover {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    width: 70%;
+    height: 50%;
+    background: #e70909;
+    border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+    border-left: 6px inset rgba(0, 0, 0, 0.5);
+    border-right: 6px inset rgba(255, 255, 255, 0.5);
+    border-top: 6px inset rgba(255, 255, 255, 0.5);
+
+
+}
+
+:root {
+    --animation: gameoverloose;
+    --speed: 2s;
+    --easing: linear;
+}
+
+
+.titleover {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 40%;
+    animation: var(--animation) var(--speed) infinite var(--easing);
+
+}
+
+@keyframes gameoverloose {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.totalwin {
+    padding-top: 30px;
+    height: 20%;
+    font-size: 2rem;
+    ;
+}
+
+.btn {
+    border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+    border-left: 6px inset rgba(0, 0, 0, 0.5);
+    border-right: 6px inset rgba(255, 255, 255, 0.5);
+    border-top: 6px inset rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 1rem;
+    min-width: 300px;
+    padding: 1rem;
+    text-transform: uppercase;
+    width: auto;
+
+}
+
+.btn.buttonStart {
+    background: #005800;
+}
+
+.btn.buttonStart:focus,
+.btn.buttonStart:hover {
+    background: #006800;
+    outline: 0;
+}
+
+
+
+
+
+.engine {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    font-size: 30px;
+
+}
+
+.wholemap {
+    align-items: center;
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    padding: 20px;
+    width: 70%;
+    background: #7c7c7c;
+    border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+    border-left: 6px inset rgba(0, 0, 0, 0.5);
+    border-right: 6px inset rgba(255, 255, 255, 0.5);
+    border-top: 6px inset rgba(255, 255, 255, 0.5);
+
+
+}
+
+.exitbtn {
+    background: #e76e55;
+    box-shadow: inset -4px -4px 0px 0px #8c2022;
+    color: #ccc;
+    float: right;
+    font-size: 50px;
+}
+
+.exitbtn:hover,
+.exitbtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    background: #ce372b;
+    box-shadow: inset -6px -6px 0px 0px #8c2022;
+
+}
+
+.smallImg {
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+
+
+}
+
+.items {
+    font-size: 25px;
+    text-transform: none;
+    display: flex;
+    flex-direction: row;
+}
