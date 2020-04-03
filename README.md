@@ -14,7 +14,7 @@ My version of Whack a Mole game. This game has additional features such as:
 * HTML, CSS, JS.
 
 ### Play online!
-https://baxuu.github.io/WhackaMario/
+https://baxuu.github.io/Whack-a-Mole-Mario-Version/
 
 
 ![](https://raw.githubusercontent.com/baxuu/Whack-a-Mole-Mario-Version/master/images/mariogame1.gif)
